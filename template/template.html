@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vessel Dashboard</title>
+  <meta name="description" content="Vessel Tracking">
+  <meta name="author" content="vessels">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Leaflet CSS Files -->
+  <link href="leaflet/leaflet.css" rel="stylesheet" />
+  <link href="leaflet/leafletfix.css" rel="stylesheet" />
+  <link href="leaflet/rstudio_leaflet.css" rel="stylesheet" />
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="shared/shiny.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .rt-text-only {
+      margin-top: 6px;
+    }
+
+    .rt-sort-header {
+      font-size: 14px;
+    }
+    
+    .col-header, .rt-th {
+      border: 1px solid #DEE2E6;
+    }
+
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid fixed-top bg-light" style="border-bottom: 1px solid grey;">
+    <div class="row mt-4">
+      <div class="col offset-xl-1 offset-lg-1 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+          {{ htmlOutput('ship_type_selector') }}
+      </div>
+      <div class="col offset-xl-1 offset-lg-1 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+          {{ htmlOutput('ship_name_selector') }}
+      </div>
+    </div>
+
+  </div>
+  <div class="container-fluid" style="margin-top:140px;">
+    <div class="row mt-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            {{ leafletOutput('mymap') }}
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="row mt-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-body" style="border-top: 3px solid #59697A; border-bottom: 3px solid #59697A;">
+            <div id="ship_records" class="reactable html-widget html-widget-output text-center d-flex justify-content-center overflow-auto"
+            style="height:auto;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+  
+
+  </div>
+
+
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[3.4.1];shiny[1.4.0];htmlwidgets[1.5.1];plotly-binding[4.9.1];bootstrap[3.4.1]</script>
+  <script src="shared/json2-min.js"></script>
+  <script src="shared/jquery.min.js"></script>
+  <script src="shared/shiny.min.js"></script>
+  <script src="js/htmlwidgets.js"></script>  
+  <!-- Leaflet JS Files -->
+  <script src="leaflet/leaflet.js"></script>
+  <script src="leaflet/proj4-compressed.js"></script>
+  <script src="leaflet/proj4leaflet.js"></script>
+  <script src="leaflet/leaflet-binding.js"></script> 
+  <!-- Reactable Files -->
+  <script src="reactable/shim.min.js"></script>
+  <script src="reactable/react.min.js"></script>
+  <script src="reactable/react-dom.min.js"></script>
+  <script src="reactable/react-tools.js"></script>
+  <script src="reactable/htmlwidgets.js"></script>
+  <script src="reactable/reactable.js"></script> 
+    <script src="bootstrap/popper.min.js"></script>
+  <script src="bootstrap/bootstrap.min.js"></script>
+  <script src="bootstrap-select/bootstrap-select.min.js"></script>
+  <script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+  <script src="shared/bootstrap/shim/respond.min.js"></script>
+</body>
+
+</html>

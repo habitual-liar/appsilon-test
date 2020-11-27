@@ -1,0 +1,10 @@
+name: shinyapp
+title:
+username:
+account: haseeb
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3307848
+bundleId: 3911623
+url: https://haseeb.shinyapps.io/shinyapp/
+when: 1606461593.4179
